@@ -1,0 +1,26 @@
+{%  extends "base.html" %}
+
+{% block content %}
+
+<table>
+    <tr><td style="padding-left: 25px;"><h2>Welcome to ICreditApp. Contact US</h2></td><td></td></tr>
+    <tr>
+        <td style="padding-left: 100px;vertical-align: top;width:50%">
+            <b>Team Members:</b><br>
+            <h2>
+            Aneesh Nair <br>
+            Deepthi Varrier<br>
+            Innis Sumbulla<br>
+            Venu Nandamuri  <br>
+            </h2>
+
+
+        </td>
+        <td style="vertical-align: top;"><br>
+                <img src="{{ url_for('static', filename='images/opp.jpg') }}" width="800" height="800" />
+        </td>
+    </tr>
+</table>
+
+
+{% endblock %}
