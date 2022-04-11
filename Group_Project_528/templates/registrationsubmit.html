@@ -1,0 +1,43 @@
+{%  extends "base.html" %}
+
+{% block content %}
+
+<table>
+    <tr><td style="padding-left: 25px;"><h2>Welcome to ICreditApp. Credit Approval Results</h2></td><td width="50%">&nbsp;</td></tr>
+    <tr>
+        <td style="padding-left: 100px;">
+            {% set f = result["fname"] %}
+            {% set l = result["lname"] %}
+            
+            
+            <b style="color:black; font-size: 18px;"> {{ f.title()}} {{ l.title()}} your</b>
+            {% if response3=='Good' %}
+            <b style="color:darkcyan; font-size: 18px;"> Credit is Approved</b>
+            {% else %}
+            <b style="color:crimson; font-size: 18px;"> Credit is Declined</b>
+            {% endif %}
+            <br><br>
+            <b>Below is the information you have provided for your credit approval</b><br>
+            {% for key, value in result.items() %}
+                {% if key=='submit' %}
+                {% else %}
+                {{key.title()}}  -  {{value}}<br>
+                {%endif %}
+            {%endfor%}
+
+           
+
+        </td>
+        <td style="vertical-align: top;"><br>
+            
+             {% if response3=='Good' %}
+                <img src="{{ url_for('static', filename='images/success.jpg') }}" width="800" height="800" />
+            {% else %}
+                <img src="{{ url_for('static', filename='images/declined.jpg') }}" width="800" height="800" />
+            {% endif %}
+        </td>
+    </tr>
+
+</table>
+
+{% endblock %}

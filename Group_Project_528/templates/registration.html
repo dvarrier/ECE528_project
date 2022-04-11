@@ -1,0 +1,83 @@
+{%  extends "base.html" %}
+
+{% block content %}
+
+<table>
+    <tr><td style="padding-left: 25px;"><h2>Welcome to ICreditApp. Register and get credit approval</h2></td><td></td></tr>
+    <tr>
+        <td style="padding-left: 100px;">
+            <form action="" method="post" name="main_form">
+                <p style="padding-top: 5px;">
+                    {{form.fname.label}} <br>
+                    {{form.fname(size=30)}} <br>
+                </p>
+                <p style="padding-top: 5px;">
+                    {{form.lname.label}} <br>
+                    {{form.lname(size=30)}} <br>
+                </p>
+                <p style="padding-top: 5px;">
+                    {{form.address.label}} <br>
+                    {{form.address(size=30)}} <br>
+                </p>
+                    <p style="padding-top: 5px;">
+                    {{form.city.label}} <br>
+                    {{form.city(size=30)}} <br>
+                </p>
+                    <p style="padding-top: 5px;">
+                    {{form.zip.label}} <br>
+                    {{form.zip(size=5)}} <br>
+                </p>
+                    <p style="padding-top: 5px;">
+                    {{form.state.label}} <br>
+                    {{form.state(size=30)}} <br>
+                </p>
+                <p style="padding-top: 5px;">
+                    {{form.age.label}} <br>
+                    {{form.age(size=2)}} (33) <br>
+                </p>
+                <p style="padding-top: 5px;">
+                    {{form.experience.label}} <br>
+                    {{form.experience(size=2)}} (8) <br>
+                </p>
+                <p style="padding-top: 5px;">
+                    {{form.profession.label}} <br>
+                    {{form.profession}} (Engineer) <br>
+                </p>
+                <p style="padding-top: 5px;">
+                    {{form.marriedyn.label}} <br>
+                    {{form.marriedyn}} (Married) <br>
+                </p>
+                <p style="padding-top: 5px;">
+                    {{form.houseownership.label}} <br>
+                    {{form.houseownership}} (Rented) <br>
+                </p>
+                <p style="padding-top: 5px;">
+                    {{form.carownership.label}} <br>
+                    {{form.carownership}}  <br>
+                </p>
+                <p style="padding-top: 5px;">
+                    {{form.income.label}} <br>
+                    {{form.income(size=7)}} (75000) <br>
+                </p>
+                <p style="padding-top: 5px;">
+                    {{form.currentjobyrs.label}} <br>
+                    {{form.currentjobyrs(size=2)}} (10) <br>
+                </p>
+                <p style="padding-top: 5px;">
+                    {{form.currenthouseyrs.label}} <br>
+                    {{form.currenthouseyrs(size=2)}} (11)<br>
+                </p>
+                <p style="padding-top: 5px;"><br>
+                    {{form.submit()}}
+                </p>
+</form>
+
+        </td>
+        <td style="vertical-align: top;"><br>
+                <img src="{{ url_for('static', filename='images/opp.jpg') }}" width="800" height="800" />
+        </td>
+    </tr>
+</table>
+
+
+{% endblock %}
